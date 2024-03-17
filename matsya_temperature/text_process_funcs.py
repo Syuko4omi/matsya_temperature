@@ -1,7 +1,7 @@
 import random
-import config
+from matsya_temperature.config import exclamations
 import mojimoji
-from specific_token_generator import symbol_gen
+from matsya_temperature.specific_token_generator import symbol_gen
 
 
 def process_tokens(tokens: list[str]) -> list[str]:
@@ -19,10 +19,10 @@ def remove_empty_string_from_list(tokens: list[str]) -> list[str]:
 def add_exclamation_to_short_or_long_sentence(tokens: list[str]) -> list[str]:
     if len(tokens) == 1 and len(tokens[0]) <= 2:
         if random.random() < 0.3:
-            return [random.choice(config.exclamations)] + tokens
+            return [random.choice(exclamations)] + tokens
     if len(tokens) >= 3 and sum([len(token) for token in tokens]) >= 20:
         if random.random() < 0.3:
-            return tokens + [random.choice(config.exclamations)]
+            return tokens + [random.choice(exclamations)]
     return tokens
 
 

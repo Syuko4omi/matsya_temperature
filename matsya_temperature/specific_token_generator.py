@@ -1,5 +1,5 @@
 import random
-import config
+from matsya_temperature.config import decorators, symbols
 
 
 def this_is_gen(mode: str) -> list[str]:
@@ -39,7 +39,7 @@ def desune_gen(mode: str) -> list[str]:
 
 def decorator_gen() -> list[str]:
     decorator = random.sample(
-        config.decorators,
+        decorators,
         random.choices([0, 1, 2, 3], weights=[20, 5, 2, 1])[0],
     )
     if len(decorator) == 1:
@@ -49,7 +49,7 @@ def decorator_gen() -> list[str]:
 
 
 def symbol_gen() -> str:
-    symbols = random.choice(config.symbols)
+    symbols_str = random.choice(symbols)
     while random.random() < 0.5:
-        symbols += random.choice(config.symbols)
-    return symbols
+        symbols_str += random.choice(symbols)
+    return symbols_str
