@@ -1,4 +1,5 @@
 import random
+
 from matsya_temperature.config import decorators, symbols
 
 

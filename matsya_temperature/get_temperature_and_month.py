@@ -1,7 +1,8 @@
 import os
+
 from pyowm.owm import OWM
-from pyowm.utils.config import get_default_config
 from pyowm.utils import formatting
+from pyowm.utils.config import get_default_config
 
 
 def get_temperature_and_month(

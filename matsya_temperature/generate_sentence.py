@@ -1,20 +1,19 @@
 import random
-from matsya_temperature.get_temperature_and_month import (
-    get_temperature_and_month,
+
+from matsya_temperature.config import (
+    climate_phrase,
+    error_phrase,
+    season_phrase,
+    template_phrase,
 )
+from matsya_temperature.get_temperature_and_month import get_temperature_and_month
 from matsya_temperature.matsya_class import Matsya
-from matsya_temperature.text_process_funcs import process_tokens
 from matsya_temperature.specific_token_generator import (
-    this_is_gen,
     decorator_gen,
     desune_gen,
+    this_is_gen,
 )
-from matsya_temperature.config import (
-    error_phrase,
-    template_phrase,
-    climate_phrase,
-    season_phrase,
-)
+from matsya_temperature.text_process_funcs import process_tokens
 
 
 def generate_sentence() -> str:

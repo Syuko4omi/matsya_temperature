@@ -1,4 +1,5 @@
 import os
+
 from flask import Flask
 
 from matsya_temperature.generate_sentence import generate_sentence

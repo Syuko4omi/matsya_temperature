@@ -1,6 +1,8 @@
 import random
-from matsya_temperature.config import exclamations
+
 import mojimoji
+
+from matsya_temperature.config import exclamations
 from matsya_temperature.specific_token_generator import symbol_gen
 
 
