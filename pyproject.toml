@@ -8,6 +8,7 @@ authors = ["Syuko4omi <riorioblackcat@yahoo.co.jp>"]
 python = "3.9.13"
 pyowm = "^3.3.0"
 mojimoji = "^0.0.13"
+flask = "^3.0.2"
 
 [tool.poetry.dev-dependencies]
 black = "^24.3.0"
